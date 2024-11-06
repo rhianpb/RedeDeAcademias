@@ -1,0 +1,42 @@
+.sessao {
+    min-height: 100vh;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.banner h1 {
+    padding: 10rem;
+    padding-left: 2rem;
+    font-size: 5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    word-spacing: -2rem;
+    margin-top: -2rem;
+}
+.banner p {
+    margin-top: -7rem;
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.banner button {
+    margin-top: 2rem;
+    margin-left: 9rem;
+    font-size: 1rem;
+    border: 0.063rem solid var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.banner button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0.063rem solid var(--secondary-color);
+}

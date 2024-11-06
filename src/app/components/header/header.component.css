@@ -29,3 +29,14 @@
 .menu ul li a:hover::after {
     width: 100%;
 }
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-logo {
+    width: 5rem;
+    height: 5rem;
+}
