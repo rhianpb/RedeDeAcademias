@@ -37,6 +37,18 @@
 }
 
 .menu-logo {
-    width: 5rem;
-    height: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-logo img {
+    height: 3rem;
+    width: auto;    
+}
+
+.menu-logo h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 2;
 }
