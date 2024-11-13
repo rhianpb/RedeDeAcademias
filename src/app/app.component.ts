@@ -7,7 +7,7 @@ import { ResourcesComponent } from "./components/resources/resources.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, MainComponent, ResourcesComponent],
+  imports: [HeaderComponent, MainComponent, ResourcesComponent,RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
