@@ -1,0 +1,44 @@
+.texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto h2  {
+    font-size: 3rem;
+    margin-left: 3rem;
+    margin-top: 5rem;
+    letter-spacing: 600;
+}
+
+.texto p {
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+
+.texto button {
+    background-color:var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    width: 20rem;
+    height: auto;
+    margin-left: 5.5rem;
+    margin-top: 3rem;
+}
+
+.texto button:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.texto button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}

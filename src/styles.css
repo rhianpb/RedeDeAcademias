@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 :root {
     --primary-color: rgb(218,229,241);
     --secondary-color: rgb(255,0,0);
@@ -13,6 +15,7 @@
 }
 html {
     scroll-behavior: smooth;
+    font-family: 'JetBrains Mono' , Times, Serif;
 }
 a{
     color: inherit;
@@ -27,7 +30,10 @@ a{
 }
 .bg-inicio {
     background: linear-gradient(var(--tertiary-color) 35%, var(--secondary-color));
-    color: var(--primary-font-color);
+    color: var(--primary-color);
     background-position: center center;
     background-size: cover;
+}
+.sessao {
+    min-height: 100vh;
 }

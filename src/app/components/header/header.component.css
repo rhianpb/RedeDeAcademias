@@ -3,10 +3,11 @@
     color: var(--quinary-color);
     padding: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.5rem;
     border-bottom: 0.1rem solid var(--quinary-color);
+
 }
 .menu ul{
     list-style: none;
@@ -27,3 +28,16 @@
 .menu ul li a:hover::after {
     width: 100%;
 }
+
+.logo img {
+    width: 20%;
+    top: 2rem;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    font-size:1.2rem;
+}
+
