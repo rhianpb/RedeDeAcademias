@@ -6,11 +6,12 @@
 .texto h2  {
     font-size: 3rem;
     margin-left: 3rem;
-    margin-top: 5rem;
+    margin-top: 10rem;
     letter-spacing: 600;
 }
 
 .texto p {
+    font-size: 1.2rem;
     margin-left: 3rem;
     margin-top: 2rem;
 }

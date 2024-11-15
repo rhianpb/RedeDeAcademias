@@ -7,6 +7,8 @@
     --quaternary-color: rgb(46,46,46);
     --quinary-color: rgb(255,255,255);
     --senary-color: rgb(255,195,15);
+    --eighth-color: rgb(46,46,46);
+    --ninth-color: rgb(255,0,0, 20%);
 }
 *{
     margin: 0;
