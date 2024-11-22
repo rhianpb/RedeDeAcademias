@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+  background-color: var(--tertiary-color);
+}
+
+span {
+    color: var(--secondary-color);
+}
+
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+
+}
+
+.services h2 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: column;
+  gap: 1rem;
+}
+.services-container .services-box {
+  flex: 1 1 30rem;
+  padding: 4rem 1rem 3rem;
+  border-radius: 2rem;
+  text-align: center;
+  transition: 0.5s ease;
+}
+
+.services-box p {
+  font-size: 1rem;
+  margin: 1rem 0 3rem;
+  color: var(--primary-color);
+}
+
+.services-box h3 {
+  color: var(--secondary-color);
+  margin-right: 10rem;
+}
+
+.avaliador img {
+    border-radius: 50%;
+    width: 70%;
+}
+.stars {
+  display: flex; 
+  gap: 5px;
+  margin-left: 5.5rem; 
+}
+
+.star {
+  color: gold;
+  font-size: 35px;
+}
+
+
