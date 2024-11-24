@@ -1,21 +1,12 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from './components/header/header.component';
-import { MainComponent } from './components/main/main.component';
-import { ResourcesComponent } from './components/resources/resources.component';
-import { ReviewsComponent } from './components/reviews/reviews.component';
-import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
-
-
+import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [HeaderComponent, MainComponent, ResourcesComponent, ReviewsComponent,ContactComponent, AboutComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [CommonModule, RouterOutlet],
 })
-
-export class AppComponent {
-  title = 'RedeAcademias';
-}
+export class AppComponent {}
