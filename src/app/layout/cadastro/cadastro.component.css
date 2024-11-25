@@ -152,6 +152,10 @@ button.botao:hover {
     color: var(--secondary-color);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
 }
+button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
 
 /* Estilo do Contêiner dos Planos */
 .planos-container {
@@ -197,7 +201,7 @@ button.botao:hover {
     -moz-appearance: none; /* Compatibilidade com Firefox */
     display: none; /* Esconde os botões de rádio */
 }
-
+  
 .planos-container input[type="radio"] {
     appearance: none; /* Remove o estilo padrão */
     -webkit-appearance: none; /* Compatibilidade com navegadores WebKit */
