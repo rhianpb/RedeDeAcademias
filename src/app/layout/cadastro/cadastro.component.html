@@ -1,65 +1,145 @@
 <main>
-    <div class="logo">
-      <img src="../../../assets/img/logo.png">
-      <h1 style="text-align: center; color: white;">LIFE FITNESS</h1>
+  <!-- Logo e título -->
+  <div class="logo">
+    <img src="../../../assets/img/logo.png" alt="Logo Life Fitness" />
+    <h1 style="text-align: center; color: white;">LIFE FITNESS</h1>
+  </div>
+
+  <!-- Seção de dados pessoais -->
+  <h2 style="text-align: center; color: white;">Dados Pessoais</h2>
+
+  <!-- Formulário -->
+  <form (ngSubmit)="onSubmit()">
+    <!-- Nome e Sobrenome -->
+    <div class="campo-dupla">
+      <div class="campo">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          id="nome"
+          [(ngModel)]="nome"
+          name="nome"
+          placeholder="Digite seu nome"
+          required
+        />
+      </div>
+      <div class="campo">
+        <label for="sobrenome">Sobrenome</label>
+        <input
+          type="text"
+          id="sobrenome"
+          [(ngModel)]="sobrenome"
+          name="sobrenome"
+          placeholder="Digite seu sobrenome"
+          required
+        />
+      </div>
     </div>
-  
-    <h2 style="text-align: center; color: white;">Dados Pessoais</h2>
-  
-    <form (ngSubmit)="onSubmit()">
-      <div class="campo-dupla">
-        <div class="campo">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" [(ngModel)]="nome" name="nome" placeholder="Digite seu nome" required>
-        </div>
-        <div class="campo">
-          <label for="sobrenome">Sobrenome</label>
-          <input type="text" id="sobrenome" [(ngModel)]="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required>
-        </div>
-      </div>
-  
-      <div class="campo-dupla">
-        <div class="campo">
-          <label for="email">Email</label>
-          <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Digite seu email" required >
-        </div>
-        <div class="campo">
-          <label for="senha">Senha</label>
-          <input type="password" id="password" [(ngModel)]="senha" name="senha" placeholder="Digite sua senha" required >
-        </div>
-      </div>
-  
+
+    <!-- Email e Senha -->
+    <div class="campo-dupla">
       <div class="campo">
-        <label for="cpf">CPF</label>
-        <input type="text" id="cpf" [(ngModel)]="cpf" name="cpf" placeholder="Digite seu CPF" required >
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="Digite seu email"
+          required
+        />
       </div>
-  
       <div class="campo">
-        <label for="telefone">Telefone</label>
-        <input type="text" id="telefone" [(ngModel)]="telefone" name="telefone" placeholder="Digite seu telefone" required>
+        <label for="senha">Senha</label>
+        <input
+          type="password"
+          id="senha"
+          [(ngModel)]="senha"
+          name="senha"
+          placeholder="Digite sua senha"
+          required
+        />
       </div>
-  
-      <div class="campo">
-        <label for="experiencia">Conte sua experiência com musculação!</label>
-        <textarea id="experiencia" [(ngModel)]="experiencia" name="experiencia" placeholder="Digite aqui..." required></textarea>
+    </div>
+
+    <!-- CPF e Telefone -->
+    <div class="campo">
+      <label for="cpf">CPF</label>
+      <input
+        type="text"
+        id="cpf"
+        [(ngModel)]="cpf"
+        name="cpf"
+        placeholder="Digite seu CPF"
+        required
+      />
+    </div>
+    <div class="campo">
+      <label for="telefone">Telefone</label>
+      <input
+        type="text"
+        id="telefone"
+        [(ngModel)]="telefone"
+        name="telefone"
+        placeholder="Digite seu telefone"
+        required
+      />
+    </div>
+
+    <!-- Experiência -->
+    <div class="campo">
+      <label for="experiencia">Conte sua experiência com musculação!</label>
+      <textarea
+        id="experiencia"
+        [(ngModel)]="experiencia"
+        name="experiencia"
+        placeholder="Digite aqui..."
+        required
+      ></textarea>
+    </div>
+
+    <!-- Planos -->
+    <div class="planos-container">
+      <p><strong>Qual plano você gostaria de escolher?</strong></p>
+
+      <input
+        type="radio"
+        name="planos"
+        id="basico"
+        value="Básico"
+        [(ngModel)]="plano"
+      />
+      <label for="basico">Plano Básico <br /><small>(R$ 99,90)</small></label>
+
+      <input
+        type="radio"
+        name="planos"
+        id="avancado"
+        value="Avançado"
+        [(ngModel)]="plano"
+      />
+      <label for="avancado"
+        >Plano Avançado <br /><small>(R$ 119,90)</small></label>
+    </div>
+
+    <!-- Botões -->
+    <div class="campo">
+      <div>
+        <button
+          type="button"
+          (click)="voltarInicio()"
+          class="botao"
+        >
+          Voltar ao Início
+        </button>
       </div>
-  
-      <div class="planos-container">
-        <p><strong>Qual plano você gostaria de escolher?</strong></p>
-  
-        <input type="radio" name="planos" id="basico" value="Básico" [(ngModel)]="plano" />
-        <label for="basico">Plano Básico <br> <small>(R$ 99,90)</small></label>
-  
-        <input type="radio" name="planos" id="avancado" value="Avançado" [(ngModel)]="plano" />
-        <label for="avancado">Plano Avançado <br> <small>(R$ 119,90)</small></label>
-      </div>
-  
-      <div class="campo">
-        <div>
-          <button (click)="voltarInicio()" class="botao">Voltar ao Início</button>
-        </div>
-        <button type="submit" class="botao" [disabled]="!formValido()">Cadastre-se</button>
-      </div>
-    </form>
-  </main>
-  
+      <button
+        type="submit"
+        class="botao"
+        [disabled]="!formValido()"
+      >
+        Cadastre-se
+      </button>
+    </div>
+  </form>
+</main>

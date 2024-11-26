@@ -5,6 +5,7 @@ import { ResourcesComponent } from './components/resources/resources.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @Component({
@@ -16,6 +17,7 @@ import { AboutComponent } from './components/about/about.component';
     <app-reviews></app-reviews>
     <app-contact></app-contact>
     <app-about></app-about>
+    <app-footer></app-footer>
   `,
   standalone: true,
   imports: [
@@ -25,6 +27,7 @@ import { AboutComponent } from './components/about/about.component';
     ReviewsComponent,
     ContactComponent,
     AboutComponent,
+    FooterComponent
   ],
 })
 export class HomeComponent {}

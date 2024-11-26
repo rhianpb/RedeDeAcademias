@@ -1,138 +1,99 @@
+/* Reset e Configurações Básicas */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--primary-font-family);
-
-}
-
-html, body {
+    font-family: var(--primary-font-family, Arial, sans-serif);
+  }
+  
+  html, body {
     height: 100%;
     width: 100%;
-}
-
-main h1 {
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
-main h2 {
-    margin-bottom: 2rem;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-}
-
-.logo img {
-    height: 3rem;
-    width: auto;   
-}
-
-main {
+  }
+  
+  main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(var(--tertiary-color) 35%, var(--secondary-color));
-    font-family: sans-serif;
+    background: linear-gradient(var(--tertiary-color, #1e1e1e) 35%, var(--secondary-color, #292929));
     font-size: 1em;
     color: white;
     min-height: 100vh;
     width: 100%;
-}
-
-.campo {
+    padding: 2rem;
+  }
+  
+  main h1 {
+    margin: 2rem 0;
+  }
+  
+  main h2 {
+    margin: 2rem 0;
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo img {
+    height: 3rem;
+    width: auto;
+  }
+  
+  /* Campos do Formulário */
+  .campo, .campo-dupla {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-.campo-dupla {
-    display: flex;
-    justify-content: space-between;
-    gap: 1em; /* Espaçamento entre os inputs */
-    margin-bottom: 1em;
-}
-
-.campo-dupla .campo {
-    flex: 1; /* Ambos os campos terão o mesmo tamanho */
-}
-
-.campo-dupla .campo input {
-    width: 100%; /* Garante que os inputs ocupem o espaço total */
-}
-
-.campo {
-    margin-bottom: 1em; /* Margem entre os campos verticais */
-}
-
-label {
-    display: block;
-    margin-bottom: 0.3em;
-    font-size: 1em;
-    color: white;
-}
-
-input {
     width: 100%;
-    padding: 0.5em;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .campo-dupla {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .campo-dupla .campo {
+    flex: 1;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 1em;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
     border-radius: 20px;
     border: 1px solid #ccc;
     background-color: #ccc;
     color: #333;
     font-size: 1em;
-}
-
-input::placeholder {
+  }
+  
+  input::placeholder, textarea::placeholder {
     color: #666;
     font-style: italic;
-}
-
-input:focus {
+  }
+  
+  input:focus, textarea:focus, select:focus {
     outline: none;
     border-color: rgb(173, 10, 10);
     box-shadow: 0 0 5px rgb(173, 10, 10);
-}
-
-
-
-
-
- textarea, select {
-    width: 80%; /* Inputs centralizados e responsivos */
-    padding: 12px 15px;
-    border: 2px solid #ccc;
-    border-radius: 25px;
-    font-size: 1rem;
-    color: #333;
-    background: rgba(240, 240, 240, 0.8); /* Fundo claro e minimalista */
-    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra interna para um visual de "rebaixo" */
-    transition: all 0.3s ease-in-out;
-}
-
-input:focus, textarea:focus, select:focus {
-    outline: none;
-    border-color: rgb(173, 10, 10); /* Foco em vermelho */
-    box-shadow: 0px 4px 8px rgba(173, 10, 10, 0.5); /* Destaque no foco */
     background: white;
-}
-
-textarea {
-    resize: none;
-    height: 120px;
-}
-
-textarea::placeholder, input::placeholder {
-    color: #888;
-    font-style: italic;
-}
-
-button.botao {
-    background-color:var(--secondary-color);
-    color: var(--primary-color);
+  }
+  
+  /* Botões */
+  button.botao {
+    background-color: var(--secondary-color, #444);
+    color: var(--primary-color, white);
     padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
@@ -142,70 +103,72 @@ button.botao {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease;
     width: 20rem;
-    height: auto;
-    margin-left: 0.3rem;
-    margin-top: 0.9rem;
-}
-
-button.botao:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    margin: 0.5rem 0;
+  }
+  
+  button.botao:hover {
+    background-color: var(--primary-color, #ff4d4d);
+    color: var(--secondary-color, #444);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
-}
-button:disabled {
+  }
+  
+  button:disabled {
     background-color: #6c757d;
     cursor: not-allowed;
   }
-
-/* Estilo do Contêiner dos Planos */
-.planos-container {
+  
+  /* Planos */
+  .planos-container {
     margin: 20px 0;
     text-align: center;
-
-}
-
-.planos-container label {
+  }
+  
+  .planos-container label {
     display: inline-block;
-    width: 250px; /* Tamanho uniforme para os planos */
+    width: 250px;
     margin: 10px;
     padding: 15px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    background: rgba(240, 240, 240, 0.8); /* Fundo claro */
+    background: rgba(240, 240, 240, 0.8);
     font-size: 1rem;
     font-weight: bold;
     color: #333;
     cursor: pointer;
     transition: all 0.3s ease;
-    
-}
-.planos-container input[type="radio"]:checked + label {
-    background: #ff4d4d; /* Fundo vermelho para o botão selecionado */
-    color: white; /* Cor do texto */
-    border-color: #ff4d4d; /* Borda do mesmo tom */
-    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.5); /* Efeito de destaque */
-    transform: scale(1.05); /* Leve aumento para destacar o botão */
-    transition: all 0.3s ease; /* Suaviza as transições */
-}
-
-
-/* Hover e Estilo do Radio Selecionado */
-.planos-container label:hover {
-    background: #ff4d4d; /* Destaque ao passar o mouse */
-    color: white;
-    border-color: #ff4d4d
-}
-.planos-container input[type="radio"] {
-    appearance: none; /* Remove o estilo padrão */
-    -webkit-appearance: none; /* Compatibilidade com navegadores WebKit */
-    -moz-appearance: none; /* Compatibilidade com Firefox */
-    display: none; /* Esconde os botões de rádio */
-}
+  }
   
-.planos-container input[type="radio"] {
-    appearance: none; /* Remove o estilo padrão */
-    -webkit-appearance: none; /* Compatibilidade com navegadores WebKit */
-    -moz-appearance: none; /* Compatibilidade com Firefox */
-    display: none; /* Esconde os botões de rádio */
-}
-
+  .planos-container input[type="radio"]:checked + label {
+    background: #ff4d4d;
+    color: white;
+    border-color: #ff4d4d;
+    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.5);
+    transform: scale(1.05);
+  }
+  
+  .planos-container label:hover {
+    background: #ff4d4d;
+    color: white;
+    border-color: #ff4d4d;
+  }
+  
+  .planos-container input[type="radio"] {
+    display: none;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .campo-dupla {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    button.botao {
+      width: 100%;
+    }
+  
+    .planos-container label {
+      width: 100%;
+    }
+  }
+  
