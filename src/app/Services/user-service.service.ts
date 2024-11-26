@@ -3,10 +3,11 @@ import { Injectable } from '@angular/core';
 import { Usuario } from '../../usuario.model';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class UserServiceService {
+export class UsuarioServiceService {
   private apiUrl = 'http://localhost:8080/usuarios';
 
   constructor(private http: HttpClient) {}
@@ -25,5 +26,4 @@ export class UserServiceService {
   listarUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(this.apiUrl);
   }
-
 }

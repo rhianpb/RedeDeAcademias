@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { Usuario } from '../../../usuario.model';
-import { UserServiceService } from '../../Services/user-service.service';
+import { UsuarioServiceService } from '../../Services/user-service.service';
+
 
 
 
@@ -11,7 +12,7 @@ import { UserServiceService } from '../../Services/user-service.service';
   selector: 'app-cadastro',
   standalone: true,
   imports: [FormsModule, CommonModule, RouterModule],
-  templateUrl: './cadastro.component.html',
+templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent {
@@ -32,7 +33,7 @@ export class CadastroComponent {
 
   constructor(
     private router: Router,
-    private userServiceService: UserServiceService
+    private usuarioServiceService: UsuarioServiceService
      // Injeção do serviço de usuário
   ) {}
 
@@ -74,13 +75,32 @@ export class CadastroComponent {
 
       console.log(usuario);
       // Chama o serviço para criar o usuário
-      this.userServiceService.criarUsuario(usuario).subscribe({
-        next: () => {
+      this.usuarioServiceService.criarUsuario(usuario).subscribe({
+        next: (response) => {
           this.alertMessage = 'Cadastro realizado com sucesso!';
-          this.router.navigate(['/']); 
+          this.router.navigate(['/']);  // Redireciona para a página inicial após sucesso
+        },
+        error: (err) => {
+          console.error(err);
+          this.alertMessage = 'Erro ao realizar cadastro. Tente novamente.';
         }
+      });
+    } else {
+      this.alertMessage = 'Por favor, preencha todos os campos obrigatórios.';
 
+
+          // // Limpar o formulário após sucesso
+          // this.nome = '';
+          // this.sobrenome = '';
+          // this.email = '';
+          // this.senha = '';
+          // this.cpf = '';
+          // this.telefone = '';
+          // this.plano = 'Básico';
+          // this.experiencia = '';
+
+      
         }
-      );};
+      };
     }
-}
+  
