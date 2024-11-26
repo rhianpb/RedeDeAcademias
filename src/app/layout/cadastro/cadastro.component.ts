@@ -76,7 +76,7 @@ export class CadastroComponent {
       console.log(usuario);
       // Chama o serviço para criar o usuário
       this.usuarioServiceService.criarUsuario(usuario).subscribe({
-        next: (response) => {
+        next: () => {
           this.alertMessage = 'Cadastro realizado com sucesso!';
           this.router.navigate(['/']);  // Redireciona para a página inicial após sucesso
         },
