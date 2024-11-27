@@ -39,7 +39,7 @@ export class CadastroComponent {
 
   // Navegar para a página inicial
   voltarInicio(): void {
-    this.router.navigate(['/cadastro']);
+    this.router.navigate(['/']);
   }
 
   // Validação do formulário

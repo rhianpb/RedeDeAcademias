@@ -104,6 +104,7 @@
     transition: all 0.3s ease;
     width: 20rem;
     margin: 0.5rem 0;
+    margin-left: 6.8rem;
   }
   
   button.botao:hover {
